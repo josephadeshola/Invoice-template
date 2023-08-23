@@ -1,82 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Voucher</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voucher</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
 
+      .voucher {
+        padding: 20px 20px 0;
+        max-width: 700px;
+        margin-top: 20px !important;
+        margin: auto;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+
+      .voucher-header {
+        background-color: rgb(77, 23, 128);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .voucher-content {
+        padding: 20px;
+      }
+
+      .logo-bg {
+        background-color: rgb(77, 23, 128);
+      }
+
+      h1 {
+        color: rgb(77, 23, 128);
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+
+      .business-logo {
+        width: 50px;
+        height: 50px;
+        display: block;
+      }
+
+      .div-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .paid-color {
+        background-color: rgba(255, 255, 0, 0.397);
+        border-radius: 20px !important;
+        padding: 2px 10px 2px 10px;
+        color: rgb(153, 153, 12);
+      }
+      span,
+    p,
+    td {
+      font-family: monospace;
+    }
+      .align-end {
+        text-align: right;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(77, 23, 128, 0.575);
+        color: #fff;
+        margin-top: 3 0px;
+      }
+      table {
+        margin-top: 20px;
+      }
+      .table th,
+      .table td {
+        padding: 8px;
+      }
+
+      td {
+        background-color: #fff;
+        color: black;
+      }
+
+      .note {
+        margin-top: 8px;
+        font-weight: 600;
+        font-family: monospace;
+      }
+      textarea {
+        border: none;
+      }
+      footer {
+        padding-bottom: 10px;
+      }
+      .total-all {
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 0 2px;
+        border-radius: 5px;
+        padding: 5px 10px 27px 10px;
+        border: 0px solid gainsboro;
+      }
+      .get-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+      .total-amount{
+        margin-top: 16px;
+      }
+      @media (max-width: 600px) {
         .voucher {
-            width: 400px;
-            margin: 50px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          width: 100% !important;
         }
 
-        .voucher-header {
-            background-color:  rgb(77, 23, 128);
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        .div-flex {
+          display: grid;
+        }
+        .align-end {
+          text-align: left;
         }
 
-        .voucher-content {
-            padding: 20px;
+        img {
+          height: 4vh;
         }
+        h2 {
+        font-size: 18px;
+      }
 
-        .business-logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
+      h3 {
+        font-size: 16px;
+      }
+      h5 {
+        font-size: 13px;
+      }
 
-        .voucher-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .voucher-details {
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .voucher-code {
-            font-size: 24px;
-            font-weight: bold;
-            border: 2px dashed rgb(77, 23, 128);
-            padding: 10px;
-            text-align: center;
-        }
-
-        .voucher-expiration {
-            font-size: 12px;
-            color: #999;
-            margin-top: 10px;
-        }
+      .align-end {
+        text-align: start;
+      }
+      .table th,
+      .table td {
+        font-size: 12px;
+        width: 75%;
+      }
+        .total-all {
+        width: 100%;
+        margin: auto;
+        height: 50%;
+        box-shadow: 0 0 2px;
+        border-radius: 5px;
+        padding: 5px 10px 27px 10px;
+        border: 0px solid gainsboro;
+      }
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <div class="voucher">
-        <div class="voucher-header">
-            <h2>Voucher</h2>
+      <div class="div-flex">
+        <div>
+          <img
+            class="business-logo"
+            src="./invoive_img-removebg-preview.png"
+            alt=""
+          />
+
+          <h1>VOUCHER</h1>
+          <p>
+            <span>Invoice Number: <strong>BO1108221120050973</strong></span
+            ><br />
+          </p>
+          <p>
+            <span
+              >Status:
+              <strong class="paid-color">Paid not release</strong></span
+            >
+          </p>
         </div>
-        <div class="voucher-content">
-            <img class="business-logo" src="./invoive_img-removebg-preview.png" alt="">
-            <div class="voucher-title">Special Offer for You</div>
-            <div class="voucher-details">Enjoy 15% off on your next purchase at <strong>Bellfast Company</strong>.</div>
-            <div class="voucher-code">BUSINESS15</div>
-            <div class="voucher-expiration">Expires on: 2023-10-15</div>
+        <div class="align-end">
+          <h3>Invoice form</h3>
+          <h5 class="get">Bellfast services</h5>
+          <p>+234 8069697526</p>
+          <p>123 Main St, 212102,Ogbomoso, Oyo,Nigeria</p>
         </div>
+      </div>
+      <hr />
+      <div class="div-flex">
+        <div>
+          <h5>Payment from</h5>
+          <p><b> Adeshola Ayomide</b></p>
+          <p>08069697526</p>
+          <p>isale General,Lecharles,Motel</p>
+        </div>
+        <div class="align-end">
+          <h5>Provider Details</h5>
+          <p>Adeshola Ayomide</p>
+          <p>08069697526</p>
+          <p>isale General,Lecharles,Motel</p>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>Quality</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>Description of Item A</td>
+            <td>$100.00</td>
+            <td>2</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>Description of Item B</td>
+            <td>$100.00</td>
+            <td>2</td>
+            <td>$100.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="div-flex">
+        <div>
+          <div class="note">Notes:</div>
+          <textarea
+            name=""
+            id=""
+            placeholder="note"
+            cols="30"
+            rows="1"
+          ></textarea>
+          <footer>
+            <h5>TERMS & CONDITION</h5>
+            <p>Enter customer notes or any other details</p>
+          </footer>
+        </div>
+        <div class="total-all">
+          <div class="get-flex">
+            <strong class="total-amount"> Total Amount</strong>
+            <p>$200.00</p>
+          </div>
+        
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
