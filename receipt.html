@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .receipt {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .receipt-header {
+            background-color: rgb(77, 23, 128);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .receipt-content {
+            padding: 20px;
+        }
+
+        .receipt-title {
+            font-size: 20px;
+            margin-bottom: 1px;
+        }
+        .business-logo{
+            height: 9vh;
+        }
+        
+
+        .receipt-details {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .receipt-items {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .item-name {
+            flex: 1;
+        }
+
+        .item-price {
+            flex-shrink: 0;
+        }
+
+        .receipt-total {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .receipt-note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <div class="receipt-header">
+            <img class="business-logo" src="./invoive_img-removebg-preview.png" alt="">
+            <h2>Receipt</h2>
+        </div>
+        <div class="receipt-content">
+            <div class="receipt-title">Order #12345</div>
+            <div class="receipt-details">
+                <div><p> Date: 2023-08-23</p></div>
+                <div><p> Customer: Adeshola Ayomide</p></div>
+            </div>
+            <div class="receipt-items">
+                <div class="item">
+                    <div class="item-name"><p> Product A</p></div>
+                    <div class="item-price"><p> $100.00</p></div>
+                </div>
+                <div class="item">
+                    <div class="item-name"><p> Product B</p></div>
+                    <div class="item-price"><p> $100.00</p></div>
+                </div>
+            </div>
+            <div class="receipt-total">Total: $200.00</div>
+            <div class="receipt-note">Thank you for your purchase!</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .invoice {
+      padding: 20px 20px 0;
+      max-width: 700px;
+      margin-top: 20px !important;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+
+    img {
+      height: 10vh;
+    }
+
+    .div-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .align-end {
+      text-align: end;
+    }
+    h2 {
+      color: rgb(77, 23, 128);
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgb(77, 23, 128);
+      color: #fff;
+      margin-top: 3 0px;
+    }
+    table {
+      margin-top: 20px;
+    }
+    .table th,
+    .table td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    td {
+      background-color: #fff;
+      color: black;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    span,
+    p,
+    td {
+      font-family: monospace;
+    }
+
+    .total-all {
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .note {
+      margin-top: 8px;
+      font-weight: 600;
+      font-family: monospace;
+    }
+    textarea {
+      border: none;
+    }
+    footer {
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .invoice {
+        width: 100% !important;
+      }
+
+      .div-flex {
+        display: grid;
+      }
+
+      img {
+        height: 4vh;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+      h5 {
+        font-size: 13px;
+      }
+
+      .align-end {
+        text-align: start;
+      }
+      .table th,
+      .table td {
+        font-size: 12px;
+        width: 75%;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="invoice">
+      <div class="div-flex">
+        <div>
+          <img src="./invoive_img-removebg-preview.png" alt="" />
+          <h2>Invoice</h2>
+          <p>
+            <span>Invoice Number: <strong>BO1108221120050973</strong></span
+            ><br />
+          </p>
+          <p>
+            <span>Status: <strong class="paid-color">Paid</strong></span>
+          </p>
+        </div>
+        <div class="align-end">
+          <h3>Invoice form</h3>
+          <h5 class="get">Bellfast services</h5>
+          <p>+234 8069697526</p>
+          <p>123 Main St, 212102,Ogbomoso, Oyo,Nigeria</p>
+        </div>
+      </div>
+      <hr />
+      <div class="div-flex">
+        <div class="billed-to">
+          <h5>Billed-To</h5>
+          <p><strong>Client Name:</strong> Adeshola Ayomide</p>
+          <p><strong>Email:</strong> josephay125d@gmail.com</p>
+          <p><strong>Address:</strong> 123 Main St, City, Country</p>
+        </div>
+        <div class="align-end">
+          <h5>Provider Details</h5>
+          <span>Adeshola Ayomide</span><br />
+          <span>08069697526</span><br />
+          <span>123 Main St, City, Country</span>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>Quality</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>Description of Item A</td>
+            <td>$100.00</td>
+            <td>2</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>Description of Item B</td>
+            <td>$100.00</td>
+            <td>2</td>
+            <td>$100.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="div-flex">
+        <div>
+          <h5>payment Details</h5>
+          <span><input type="checkbox" />Wallet</span><br />
+          <span><input type="checkbox" />New Card</span>
+          <h5>Save Card</h5>
+          <span><input type="checkbox" />Yes</span><br />
+          <span><input type="checkbox" />No</span>
+        </div>
+        <div>
+          <div class="total-all">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Sub total</th>
+                  <th>Service change</th>
+                  <th>Tax</th>
+                  <th>Discount</th>
+                  <th>Total Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>$100.00</td>
+                  <td>0</td>
+                  <td>(10%)</td>
+                  <td>0</td>
+                  <td>$100.00</td>
+                </tr>
+                <tr>
+                  <td>$100.00</td>
+                  <td>0</td>
+                  <td>(10%)</td>
+                  <td>0</td>
+                  <td>$100.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="note">Notes:</div>
+      <textarea name="" id="" placeholder="note" cols="30" rows="1"></textarea>
+      <footer>
+        <h5>TERMS & CONDITION</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+          laudantium?
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
