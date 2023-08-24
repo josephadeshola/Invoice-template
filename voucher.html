@@ -107,6 +107,7 @@
       .total-all {
         width: 50%;
         height: 50%;
+        margin-top: 20px;
         box-shadow: 0 0 2px;
         border-radius: 5px;
         padding: 5px 10px 27px 10px;
@@ -115,6 +116,20 @@
       .get-flex {
         display: flex;
         justify-content: space-between;
+      }
+      .get-flex-sm{
+        display: flex;
+        justify-content: space-between; 
+        display: none;
+      }
+      .total-all-sm {
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 0 2px;
+        border-radius: 5px;
+        padding: 5px 10px 27px 10px;
+        display: none;
+        border: 0px solid gainsboro;
       }
       .total-amount{
         margin-top: 16px;
@@ -160,6 +175,22 @@
         box-shadow: 0 0 2px;
         border-radius: 5px;
         padding: 5px 10px 27px 10px;
+        display: none;
+        border: 0px solid gainsboro;
+      }
+      .get-flex-sm{
+        display: flex;
+        justify-content: space-between; 
+       
+      }
+      .total-all-sm {
+        width: 50%;
+        height: 50%;
+        margin-top: 30px;
+        box-shadow: 0 0 2px;
+        border-radius: 5px;
+        padding: 5px 10px 27px 10px;
+        display: block;
         border: 0px solid gainsboro;
       }
       }
@@ -237,6 +268,13 @@
           </tr>
         </tbody>
       </table>
+      <div class="total-all-sm">
+        <div class="get-flex-sm">
+          <strong class="total-amount"> Total Amount</strong>
+          <p>$200.00</p>
+        </div>
+      
+      </div>
       <div class="div-flex">
         <div>
           <div class="note">Notes:</div>
